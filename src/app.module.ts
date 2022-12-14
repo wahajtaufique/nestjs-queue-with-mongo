@@ -4,6 +4,7 @@ import { BullModule } from '@nestjs/bull/dist';
 import { MongooseModule } from '@nestjs/mongoose';
 import { NewsModule } from './publishNews/publishNews.module';
 import { CheckNewsModule } from './checkNews/checkNews.module';
+import { BullBoardController } from './bull-board//bull-board-controller';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { CheckNewsModule } from './checkNews/checkNews.module';
     NewsModule,
     CheckNewsModule
   ],
-  controllers: [],
+  controllers: [BullBoardController],
   providers: [],
 })
 export class AppModule {}

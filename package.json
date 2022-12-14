@@ -19,6 +19,8 @@
     "test:e2e": "echo 'No e2e tests implemented yet.'"
   },
   "dependencies": {
+    "@bull-board/api": "^4.8.0",
+    "@bull-board/express": "^4.8.0",
     "@nestjs/bull": "^0.6.0",
     "@nestjs/common": "9.0.1",
     "@nestjs/config": "^2.2.0",
@@ -27,6 +29,7 @@
     "@nestjs/platform-express": "9.0.1",
     "bull": "4.8.4",
     "dotenv": "16.0.1",
+    "express-basic-auth": "^1.2.1",
     "moment": "^2.29.4",
     "mongoose": "^6.8.0",
     "reflect-metadata": "0.1.13",

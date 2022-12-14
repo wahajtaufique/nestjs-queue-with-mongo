@@ -1,9 +1,9 @@
 import { BullModule } from '@nestjs/bull/dist';
 import { Module } from '@nestjs/common';
 import { CheckNewsProcessor } from './checkNews.processor';
+import { CheckNewsController } from './checkNews.controller';
 
 // Required to register both queues here
-
 @Module({
   imports: [
     BullModule.registerQueue({
@@ -12,7 +12,7 @@ import { CheckNewsProcessor } from './checkNews.processor';
       name: "publish-news"
     }),
   ],
-  controllers: [],
+  controllers: [CheckNewsController],
   providers: [CheckNewsProcessor],
 })
 export class CheckNewsModule {}
